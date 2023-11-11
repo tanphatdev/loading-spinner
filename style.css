@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+}
+
+.groove {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 1), 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.groove::before {
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 1), 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.groove .first-ball {
+    position: absolute;
+    height: 186px;
+    width: 220px;
+    animation: first-rotate 3s ease-in-out infinite;
+}
+
+@keyframes first-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.groove .first-ball::before {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: #4285f4;
+    border-radius: 50%;
+}
+
+.groove .second-ball {
+    position: absolute;
+    height: 186px;
+    width: 220px;
+    animation: second-rotate 4s ease-in-out infinite;
+}
+
+@keyframes second-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.groove .second-ball::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #fbbc05;
+    border-radius: 50%;
+}
+
+.groove .third-ball {
+    position: absolute;
+    height: 186px;
+    width: 220px;
+    transform: rotate(45deg);
+    animation: third-rotate 2s ease-in-out infinite;
+}
+
+@keyframes third-rotate {
+    from {
+        transform: rotate(45deg);
+    }
+
+    to {
+        transform: rotate(405deg);
+    }
+}
+
+.groove .third-ball::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #34a853;
+    border-radius: 50%;
+}
